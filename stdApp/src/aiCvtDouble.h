@@ -1,4 +1,4 @@
-/* $Id: aiCvtDouble.h,v 1.1.1.1 2001-07-03 20:05:25 sluiter Exp $ */
+/* aiCvtDouble.h,v 1.1.1.1 2001/07/03 20:05:25 sluiter Exp */
 
 /* DISCLAIMER: This software is provided `as is' and without _any_ kind of
  *             warranty. Use it at your own risk - I won't be responsible
@@ -27,7 +27,10 @@
  *
  * Author: Till Straumann (PTB, 1999)
  *
- * $Log: not supported by cvs2svn $
+ * aiCvtDouble.h,v
+ * Revision 1.1.1.1  2001/07/03 20:05:25  sluiter
+ * Creating
+ *
  * Revision 1.3  1999/04/20 19:25:17  strauman
  * *** empty log message ***
  *

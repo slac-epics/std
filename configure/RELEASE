@@ -4,19 +4,18 @@
 
 TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
 
-SUPPORT=/home/epicsioc/dev/synApps/support
+EPICS_MODULES=$(EPICS_SITE_TOP)/modules
 
-#If using the sequencer, point SNCSEQ at its top directory:
-SNCSEQ=$(SUPPORT)/seq/2-0-11
+SEQ_MODULE_VERSION=pcds-R1.0-r419
+ASYN_MODULE_VERSION=pcds-R1.0-r433
+GENSUB_MODULE_VERSION=pcds-R1.0-r429
+BASE_MODULE_VERSION=pcds-R1.1-r610
 
-# For serial support
-ASYN=$(SUPPORT)/asyn/4-6
+SNCSEQ=$(EPICS_MODULES)/seq/$(SEQ_MODULE_VERSION)
+ASYN=$(EPICS_MODULES)/asyn/$(ASYN_MODULE_VERSION)
+GENSUB=$(EPICS_MODULES)/genSub/$(GENSUB_MODULE_VERSION)
 
-# For PV history
-GENSUB=$(SUPPORT)/genSub/1-6
-
-# EPICS_BASE usually appears last so other apps can override stuff:
-EPICS_BASE=/home/epicsioc/dev/base
+EPICS_BASE=$(EPICS_SITE_TOP)/base/$(BASE_MODULE_VERSION)
 
 #Capfast users may need the following definitions
 #CAPFAST_TEMPLATES=
