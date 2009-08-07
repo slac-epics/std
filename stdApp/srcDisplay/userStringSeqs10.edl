@@ -1,0 +1,657 @@
+4 0 0
+beginScreenProperties
+major 4
+minor 0
+release 0
+x 466
+y 87
+w 140
+h 220
+font "helvetica-medium-r-18.0"
+ctlFont "helvetica-medium-r-8.0"
+btnFont "helvetica-medium-r-18.0"
+fgColor index 64
+bgColor index 3
+textColor index 14
+ctlFgColor1 index 30
+ctlFgColor2 index 32
+ctlBgColor1 index 34
+ctlBgColor2 index 35
+topShadowColor index 37
+botShadowColor index 44
+snapToGrid
+gridSize 5
+endScreenProperties
+
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 20
+y 20
+w 120
+h 20
+controlPv "$(P)userStringSeq1.DESC"
+font "helvetica-medium-r-8.0"
+smartRefresh
+fastUpdate
+fgColor index 54
+bgColor index 3
+editable
+autoHeight
+format decimal
+motifWidget
+nullColor index 32
+useHexPrefix
+objType "controls"
+newPos
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 20
+y 40
+w 120
+h 20
+controlPv "$(P)userStringSeq2.DESC"
+font "helvetica-medium-r-8.0"
+smartRefresh
+fastUpdate
+fgColor index 54
+bgColor index 3
+editable
+autoHeight
+format decimal
+motifWidget
+nullColor index 32
+useHexPrefix
+objType "controls"
+newPos
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 20
+y 60
+w 120
+h 20
+controlPv "$(P)userStringSeq3.DESC"
+font "helvetica-medium-r-8.0"
+smartRefresh
+fastUpdate
+fgColor index 54
+bgColor index 3
+editable
+autoHeight
+format decimal
+motifWidget
+nullColor index 32
+useHexPrefix
+objType "controls"
+newPos
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 20
+y 80
+w 120
+h 20
+controlPv "$(P)userStringSeq4.DESC"
+font "helvetica-medium-r-8.0"
+smartRefresh
+fastUpdate
+fgColor index 54
+bgColor index 3
+editable
+autoHeight
+format decimal
+motifWidget
+nullColor index 32
+useHexPrefix
+objType "controls"
+newPos
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 20
+y 100
+w 120
+h 20
+controlPv "$(P)userStringSeq5.DESC"
+font "helvetica-medium-r-8.0"
+smartRefresh
+fastUpdate
+fgColor index 54
+bgColor index 3
+editable
+autoHeight
+format decimal
+motifWidget
+nullColor index 32
+useHexPrefix
+objType "controls"
+newPos
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 20
+y 120
+w 120
+h 20
+controlPv "$(P)userStringSeq6.DESC"
+font "helvetica-medium-r-8.0"
+smartRefresh
+fastUpdate
+fgColor index 54
+bgColor index 3
+editable
+autoHeight
+format decimal
+motifWidget
+nullColor index 32
+useHexPrefix
+objType "controls"
+newPos
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 20
+y 140
+w 120
+h 20
+controlPv "$(P)userStringSeq7.DESC"
+font "helvetica-medium-r-8.0"
+smartRefresh
+fastUpdate
+fgColor index 54
+bgColor index 3
+editable
+autoHeight
+format decimal
+motifWidget
+nullColor index 32
+useHexPrefix
+objType "controls"
+newPos
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 20
+y 160
+w 120
+h 20
+controlPv "$(P)userStringSeq8.DESC"
+font "helvetica-medium-r-8.0"
+smartRefresh
+fastUpdate
+fgColor index 54
+bgColor index 3
+editable
+autoHeight
+format decimal
+motifWidget
+nullColor index 32
+useHexPrefix
+objType "controls"
+newPos
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 20
+y 180
+w 120
+h 20
+controlPv "$(P)userStringSeq9.DESC"
+font "helvetica-medium-r-8.0"
+smartRefresh
+fastUpdate
+fgColor index 54
+bgColor index 3
+editable
+autoHeight
+format decimal
+motifWidget
+nullColor index 32
+useHexPrefix
+objType "controls"
+newPos
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 20
+y 200
+w 120
+h 20
+controlPv "$(P)userStringSeq10.DESC"
+font "helvetica-medium-r-8.0"
+smartRefresh
+fastUpdate
+fgColor index 54
+bgColor index 3
+editable
+autoHeight
+format decimal
+motifWidget
+nullColor index 32
+useHexPrefix
+objType "controls"
+newPos
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 0
+y 20
+w 20
+h 20
+fgColor index 14
+bgColor index 51
+topShadowColor index 2
+botShadowColor index 12
+font "helvetica-medium-r-10.0"
+icon
+numPvs 6
+numDsps 3
+displayFileName {
+  0 userStringSeq.edl
+  1 userStringSeq_full.edl
+  2 userStringSeq_demo.edl
+}
+menuLabel {
+  0 userStringSeq 1
+  1 userStringSeq 1 (full)
+  2 userStringSeq 1 (demo)
+}
+symbols {
+  0 "P=$(P),S=userStringSeq1"
+  1 "P=$(P),S=userStringSeq1"
+  2 "P=$(P),S=userStringSeq1"
+}
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 0
+y 40
+w 20
+h 20
+fgColor index 14
+bgColor index 51
+topShadowColor index 2
+botShadowColor index 12
+font "helvetica-medium-r-10.0"
+icon
+numPvs 6
+numDsps 3
+displayFileName {
+  0 userStringSeq.edl
+  1 userStringSeq_full.edl
+  2 userStringSeq_demo.edl
+}
+menuLabel {
+  0 userStringSeq 2
+  1 userStringSeq 2 (full)
+  2 userStringSeq 2 (demo)
+}
+symbols {
+  0 "P=$(P),S=userStringSeq2"
+  1 "P=$(P),S=userStringSeq2"
+  2 "P=$(P),S=userStringSeq2"
+}
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 0
+y 60
+w 20
+h 20
+fgColor index 14
+bgColor index 51
+topShadowColor index 2
+botShadowColor index 12
+font "helvetica-medium-r-10.0"
+icon
+numPvs 6
+numDsps 3
+displayFileName {
+  0 userStringSeq.edl
+  1 userStringSeq_full.edl
+  2 userStringSeq_demo.edl
+}
+menuLabel {
+  0 userStringSeq 3
+  1 userStringSeq 3 (full)
+  2 userStringSeq 3 (demo)
+}
+symbols {
+  0 "P=$(P),S=userStringSeq3"
+  1 "P=$(P),S=userStringSeq3"
+  2 "P=$(P),S=userStringSeq3"
+}
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 0
+y 80
+w 20
+h 20
+fgColor index 14
+bgColor index 51
+topShadowColor index 2
+botShadowColor index 12
+font "helvetica-medium-r-10.0"
+icon
+numPvs 6
+numDsps 3
+displayFileName {
+  0 userStringSeq.edl
+  1 userStringSeq_full.edl
+  2 userStringSeq_demo.edl
+}
+menuLabel {
+  0 userStringSeq 4
+  1 userStringSeq 4 (full)
+  2 userStringSeq 4 (demo)
+}
+symbols {
+  0 "P=$(P),S=userStringSeq4"
+  1 "P=$(P),S=userStringSeq4"
+  2 "P=$(P),S=userStringSeq4"
+}
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 0
+y 100
+w 20
+h 20
+fgColor index 14
+bgColor index 51
+topShadowColor index 2
+botShadowColor index 12
+font "helvetica-medium-r-10.0"
+icon
+numPvs 6
+numDsps 3
+displayFileName {
+  0 userStringSeq.edl
+  1 userStringSeq_full.edl
+  2 userStringSeq_demo.edl
+}
+menuLabel {
+  0 userStringSeq 5
+  1 userStringSeq 5 (full)
+  2 userStringSeq 5 (demo)
+}
+symbols {
+  0 "P=$(P),S=userStringSeq5"
+  1 "P=$(P),S=userStringSeq5"
+  2 "P=$(P),S=userStringSeq5"
+}
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 0
+y 120
+w 20
+h 20
+fgColor index 14
+bgColor index 51
+topShadowColor index 2
+botShadowColor index 12
+font "helvetica-medium-r-10.0"
+icon
+numPvs 6
+numDsps 3
+displayFileName {
+  0 userStringSeq.edl
+  1 userStringSeq_full.edl
+  2 userStringSeq_demo.edl
+}
+menuLabel {
+  0 userStringSeq 6
+  1 userStringSeq 6 (full)
+  2 userStringSeq 6 (demo)
+}
+symbols {
+  0 "P=$(P),S=userStringSeq6"
+  1 "P=$(P),S=userStringSeq6"
+  2 "P=$(P),S=userStringSeq6"
+}
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 0
+y 140
+w 20
+h 20
+fgColor index 14
+bgColor index 51
+topShadowColor index 2
+botShadowColor index 12
+font "helvetica-medium-r-10.0"
+icon
+numPvs 6
+numDsps 3
+displayFileName {
+  0 userStringSeq.edl
+  1 userStringSeq_full.edl
+  2 userStringSeq_demo.edl
+}
+menuLabel {
+  0 userStringSeq 7
+  1 userStringSeq 7 (full)
+  2 userStringSeq 7 (demo)
+}
+symbols {
+  0 "P=$(P),S=userStringSeq7"
+  1 "P=$(P),S=userStringSeq7"
+  2 "P=$(P),S=userStringSeq7"
+}
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 0
+y 160
+w 20
+h 20
+fgColor index 14
+bgColor index 51
+topShadowColor index 2
+botShadowColor index 12
+font "helvetica-medium-r-10.0"
+icon
+numPvs 6
+numDsps 3
+displayFileName {
+  0 userStringSeq.edl
+  1 userStringSeq_full.edl
+  2 userStringSeq_demo.edl
+}
+menuLabel {
+  0 userStringSeq 8
+  1 userStringSeq 8 (full)
+  2 userStringSeq 8 (demo)
+}
+symbols {
+  0 "P=$(P),S=userStringSeq8"
+  1 "P=$(P),S=userStringSeq8"
+  2 "P=$(P),S=userStringSeq8"
+}
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 0
+y 180
+w 20
+h 20
+fgColor index 14
+bgColor index 51
+topShadowColor index 2
+botShadowColor index 12
+font "helvetica-medium-r-10.0"
+icon
+numPvs 6
+numDsps 3
+displayFileName {
+  0 userStringSeq.edl
+  1 userStringSeq_full.edl
+  2 userStringSeq_demo.edl
+}
+menuLabel {
+  0 userStringSeq 9
+  1 userStringSeq 9 (full)
+  2 userStringSeq 9 (demo)
+}
+symbols {
+  0 "P=$(P),S=userStringSeq9"
+  1 "P=$(P),S=userStringSeq9"
+  2 "P=$(P),S=userStringSeq9"
+}
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 0
+y 200
+w 20
+h 20
+fgColor index 14
+bgColor index 51
+topShadowColor index 2
+botShadowColor index 12
+font "helvetica-medium-r-10.0"
+icon
+numPvs 6
+numDsps 3
+displayFileName {
+  0 userStringSeq.edl
+  1 userStringSeq_full.edl
+  2 userStringSeq_demo.edl
+}
+menuLabel {
+  0 userStringSeq 10
+  1 userStringSeq 10 (full)
+  2 userStringSeq 10 (demo)
+}
+symbols {
+  0 "P=$(P),S=userStringSeq10"
+  1 "P=$(P),S=userStringSeq10"
+  2 "P=$(P),S=userStringSeq10"
+}
+endObjectProperties
+
+# (Choice Button)
+object activeChoiceButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 0
+y 0
+w 140
+h 20
+fgColor index 14
+bgColor index 51
+selectColor index 51
+inconsistentColor index 14
+topShadowColor index 0
+botShadowColor index 14
+controlPv "$(P)userStringSeqEnable.VAL"
+font "helvetica-medium-r-10.0"
+orientation "horizontal"
+endObjectProperties
+
