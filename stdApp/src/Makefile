@@ -31,7 +31,6 @@ DBD += std.dbd
 DBD += stdVX.dbd
 DBD += stdSupport.dbd
 DBD += stdVXSupport.dbd
-DBD += shareBase.dbd
 
 #=============================
 
@@ -42,8 +41,10 @@ std_SRCS_vxWorks += aiCvtDouble.c
 std_SRCS += scalerRecord.c
 std_SRCS += devScalerAsyn.c
 std_SRCS += drvScalerSoft.c
+std_SRCS += drvScaler974.cpp
 std_SRCS += epidRecord.c
 std_SRCS += devEpidSoft.c
+std_SRCS += devEpidSoftCallback.c
 std_SRCS += devEpidFast.c
 std_SRCS += sseqRecord.c
 #std_SRCS += devVXStats.c
