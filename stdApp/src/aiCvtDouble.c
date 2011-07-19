@@ -1,4 +1,4 @@
-/* aiCvtDouble.c,v 1.2 2003/05/28 20:09:18 bcda Exp */
+/* $Id: aiCvtDouble.c,v 1.2 2003-05-28 20:09:18 bcda Exp $ */
 #include <vxWorks.h>
 #include <types.h>
 #include <stdioLib.h>
@@ -28,10 +28,7 @@
  *
  * T. Straumann (PTB, 1999)
  *
- * aiCvtDouble.c,v
- * Revision 1.2  2003/05/28 20:09:18  bcda
- * Convert for 3.14: include recGbl.h
- *
+ * $Log: not supported by cvs2svn $
  * Revision 1.1.1.1  2001/07/03 20:05:23  sluiter
  * Creating
  *
