@@ -5,15 +5,16 @@ include $(TOP)/RELEASE_SITE
 # ===============================================================
 # Define the location and version of EPICS base
 # ===============================================================
-BASE_MODULE_VERSION=R3.14.9-0.3.0
+#BASE_MODULE_VERSION=R3.14.9-0.3.0
+BASE_MODULE_VERSION=R3.14.11-0.1.0
 EPICS_BASE=$(EPICS_SITE_TOP)/base/$(BASE_MODULE_VERSION)
 
 # ===============================================================
 # Define the version(s) of any other needed modules 
 # ===============================================================
-SEQ_MODULE_VERSION=R2.0.11-1.0.0
-ASYN_MODULE_VERSION=R4.10.1-1.0.0
-GENSUB_MODULE_VERSION=R1.6.1.2-1.0.0
+SEQ_MODULE_VERSION=R2.0.11-1.1.0
+ASYN_MODULE_VERSION=R4.14.0-0.1.0
+GENSUB_MODULE_VERSION=R1.6.1.2-2.0.1
 
 # ============================================================
 # External Support module path definitions
