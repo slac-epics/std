@@ -11,5 +11,6 @@ EPICS_MODULES=$(EPICS_SITE_TOP)/modules
 
 # Use the latest version of msi to avoid dependency on the extensions version
 MSI=$(EPICS_SITE_TOP)/extensions/current/bin/$(EPICS_HOST_ARCH)/msi
+SNC = $(SEQ)/bin/$(EPICS_HOST_ARCH)/snc
 EPICS_HOST_ARCH=linux-x86_64
 
