@@ -1,22 +1,44 @@
 #RELEASE Location of external products
 # Run "gnumake clean uninstall install" in the application
 # top directory each time this file is changed.
-
+include $(TOP)/RELEASE_SITE
 TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
 
-SUPPORT=/home/oxygen/MOONEY/epics/synAppsSVN/support
--include $(TOP)/../configure/SUPPORT.$(EPICS_HOST_ARCH)
+# =============================================================
+# If you don't want to install into $(TOP) then
+# define INSTALL_LOCATION_APP here
+#INSTALL_LOCATION_APP=<fullpathname>
 
-#If using the sequencer, point SNCSEQ at its top directory:
-SNCSEQ=$(SUPPORT)/seq-2-1-2
 
-# For serial support
-ASYN=$(SUPPORT)/asyn-4-17
+# =============================================================
+# Define location of module tree with respect to
+# EPICS_SITE_TOP
+# =============================================================
+EPICS_MODULES=$(MODULES_SITE_TOP)
 
+# =============================================================
+# Define the version of modules needed by
+# IOC apps or other Support apps
+# =============================================================
+SEQ_MODULE_VERSION=seq-R2-1-3-lcls1
+ASYN_MODULE_VERSION=asyn-R4-18-lcls1
+
+# ============================================================
+#  Module Location
+# ============================================================
+SNCSEQ=$(EPICS_MODULES)/seq/$(SEQ_MODULE_VERSION)
+ASYN=$(EPICS_MODULES)/asyn/$(ASYN_MODULE_VERSION)
+
+# ==============================================================
+# Define the cvs module version of EPICS BASE that you will use
+# =============================================================
+BASE_MODULE_VERSION=$(EPICS_BASE_VER)
+
+# =================================================================
+# Define EPICS_BASE
 # EPICS_BASE usually appears last so other apps can override stuff:
-EPICS_BASE=/home/oxygen/MOONEY/epics/base-3.14.12.1
--include $(TOP)/../configure/EPICS_BASE.$(EPICS_HOST_ARCH)
+# =================================================================
+EPICS_BASE=$(BASE_SITE_TOP)/$(BASE_MODULE_VERSION)
 
-#Capfast users may need the following definitions
-#CAPFAST_TEMPLATES=
-#SCH2EDIF_PATH=
+# End of file
+
