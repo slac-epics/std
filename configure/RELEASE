@@ -8,13 +8,16 @@ include $(TOP)/RELEASE_SITE
 BASE_MODULE_VERSION = R3.14.12-0.4.0
 EPICS_BASE=$(EPICS_SITE_TOP)/base/$(BASE_MODULE_VERSION)
 
+TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
+
+SUPPORT=$(EPICS_MODULES)
+-include $(TOP)/../configure/SUPPORT.$(EPICS_HOST_ARCH)
 
 # ===============================================================
 # Define the version(s) of any other needed modules 
 # ===============================================================
 SEQ_MODULE_VERSION=R2.1.2-0.4.0
 ASYN_MODULE_VERSION=R4.14.0-0.4.0
-GENSUB_MODULE_VERSION=R1.6.1.2-2.4.0
 
 # ============================================================
 # External Support module path definitions
@@ -31,5 +34,11 @@ GENSUB_MODULE_VERSION=R1.6.1.2-2.4.0
 # ============================================================
 SEQ=$(EPICS_MODULES)/seq/$(SEQ_MODULE_VERSION)
 ASYN=$(EPICS_MODULES)/asyn/$(ASYN_MODULE_VERSION)
-GENSUB=$(EPICS_MODULES)/genSub/$(GENSUB_MODULE_VERSION)
+#If using the sequencer, point SNCSEQ at its top directory:
+SNCSEQ=$(SEQ)
+# For serial support
+#ASYN=$(SUPPORT)/asyn-4-17
 
+# EPICS_BASE usually appears last so other apps can override stuff:
+#EPICS_BASE=/home/oxygen/MOONEY/epics/base-3.14.12.1
+-include $(TOP)/../configure/EPICS_BASE.$(EPICS_HOST_ARCH)
