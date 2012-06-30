@@ -17,7 +17,7 @@ SUPPORT=$(EPICS_MODULES)
 # Define the version(s) of any other needed modules 
 # ===============================================================
 SEQ_MODULE_VERSION=R2.1.2-0.4.0
-ASYN_MODULE_VERSION=R4.14.0-0.4.0
+ASYN_MODULE_VERSION=R4.19.0-0.1.0
 
 # ============================================================
 # External Support module path definitions
