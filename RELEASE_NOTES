@@ -10,6 +10,9 @@
 #  Auth: dd-yyy,yyyy, Author's Name      (USERNAME)           
 #  Rev:  dd-mmm-yyyy, Reviewer's Name    (USERNAME)
 #==============================================================
+std-R3-1_1-0:     Update RELEASE file to use the following:
+                  -- seq-R2-1-6_1-0
+                  -- asyn-R4-18-lcls2
 std-R3-1-lcls1:   Initial build with some local modifications for
                   SLAC related to build style and configuration.
                   READ the RELEASE_NOTES from the APS:
