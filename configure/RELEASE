@@ -21,7 +21,7 @@ EPICS_MODULES=$(MODULES_SITE_TOP)
 # IOC apps or other Support apps
 # =============================================================
 SEQ_MODULE_VERSION=seq-R2-1-6_1-0
-ASYN_MODULE_VERSION=asyn-R4-18-lcls2
+ASYN_MODULE_VERSION=asyn-R4-20_1-1
 
 # ============================================================
 #  Module Location
