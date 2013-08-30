@@ -10,6 +10,9 @@
 #  Auth: dd-yyy,yyyy, Author's Name      (USERNAME)           
 #  Rev:  dd-mmm-yyyy, Reviewer's Name    (USERNAME)
 #==============================================================
+std-R3-1_1-2:    Update RELEASE file to use the following:
+                   -- asyn-R4-21_1-0
+
 std-R3-1_1-1:     Update RELEASE file to use the following:
                    -- asyn-R4-20_1-1
 
