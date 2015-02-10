@@ -10,6 +10,8 @@
 #  Auth: dd-yyy,yyyy, Author's Name      (USERNAME)           
 #  Rev:  dd-mmm-yyyy, Reviewer's Name    (USERNAME)
 #==============================================================
+std-R3-1_1-3:    Build against seq-R2-1-6_1-3 and asyn-trunk_Sept_17_2013
+
 std-R3-1_1-2:    Update RELEASE file to use the following:
                    -- asyn-R4-21_1-0
 
