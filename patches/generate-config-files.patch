@@ -1,0 +1,108 @@
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..c8c2c52
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1,17 @@
++*~
++O.*
++*.log
++*.swp
++bin/
++cfg/
++db/
++dbd/
++display/
++html/
++include/
++lib/
++templates/
++cdCommands
++envPaths
++RELEASE_SITE
++tags
+diff --git a/configure/RELEASE b/configure/RELEASE
+index 5c653d3..f32a656 100644
+--- a/configure/RELEASE
++++ b/configure/RELEASE
+@@ -1,22 +1,17 @@
+-#RELEASE Location of external products
++# RELEASE
++# Defines location of external products
+ # Run "gnumake clean uninstall install" in the application
+ # top directory each time this file is changed.
++-include $(TOP)/configure/RELEASE.local
+ 
+-TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
++# Check for valid macro definitions for module release directories
++# You can add tests here to make sure RELEASE.local defined valid
++# macros for all the module dependencies
++#ifeq ($(wildcard $(EPICS_BASE)/include),)
++#$(error Invalid EPICS_BASE: $(EPICS_BASE))
++#endif
++#ifeq ($(wildcard $(ASYN)/include),)
++#$(error Invalid ASYN: $(ASYN))
++#endif
++#...
+ 
+-SUPPORT=/home/oxygen/MOONEY/epics/synAppsSVN/support
+--include $(TOP)/../configure/SUPPORT.$(EPICS_HOST_ARCH)
+-
+-#If using the sequencer, point SNCSEQ at its top directory:
+-SNCSEQ=$(SUPPORT)/seq-2-1-2
+-
+-# For serial support
+-ASYN=$(SUPPORT)/asyn-4-17
+-
+-# EPICS_BASE usually appears last so other apps can override stuff:
+-EPICS_BASE=/home/oxygen/MOONEY/epics/base-3.14.12.1
+--include $(TOP)/../configure/EPICS_BASE.$(EPICS_HOST_ARCH)
+-
+-#Capfast users may need the following definitions
+-#CAPFAST_TEMPLATES=
+-#SCH2EDIF_PATH=
+diff --git a/configure/RELEASE.local b/configure/RELEASE.local
+new file mode 100644
+index 0000000..aecdad6
+--- /dev/null
++++ b/configure/RELEASE.local
+@@ -0,0 +1,39 @@
++# RELEASE.local
++#
++# Read definitions of:
++#	EPICS_SITE_TOP
++#	BASE_MODULE_VERSION
++#	EPICS_MODULES 
++# from one of the following options
++-include $(TOP)/../../RELEASE_SITE
++-include $(TOP)/RELEASE_SITE
++
++# Check that EPICS_MODULES was defined in a RELEASE_SITE file
++-include $(TOP)/../../RELEASE_SITE.check
++
++# ==========================================================
++# Define the version strings for all needed modules
++# Use naming pattern:
++#   FOO_MODULE_VERSION = R1.2
++# so scripts can extract version strings
++# Don't set your version to anything such as "test" that
++# could match a directory name.
++# ==========================================================
++SEQ_MODULE_VERSION=R2.2.4-1.0
++ASYN_MODULE_VERSION=R4.30-0.3.0
++
++# ==========================================================
++# Define module paths using pattern
++# FOO = $(EPICS_MODULES)/foo/$(FOO_MODULE_VERSION)
++#  or
++# FOO = /Full/Path/To/Development/Version 
++# ==========================================================
++SNCSEQ=$(EPICS_MODULES)/seq/$(SEQ_MODULE_VERSION)
++ASYN=$(EPICS_MODULES)/asyn/$(ASYN_MODULE_VERSION)
++
++# Set EPICS_BASE last so it appears last in the DB, DBD, INCLUDE, and LIB search paths
++EPICS_BASE              = $(EPICS_SITE_TOP)/base/$(BASE_MODULE_VERSION)
++
++# Check for undefined EPICS_BASE
++-include $(TOP)/../../EPICS_BASE.check
++
