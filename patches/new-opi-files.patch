@@ -1,0 +1,276 @@
+diff --git a/stdApp/op/opi/color.csv b/stdApp/op/opi/color.csv
+new file mode 100644
+index 0000000..bea29e3
+--- /dev/null
++++ b/stdApp/op/opi/color.csv
+@@ -0,0 +1,81 @@
++"""Disconn/Invalid""","{",256,256,256
++"""grey-1""","{",237,237,237
++"""grey-2""","{",219,219,219
++"""GLOBAL canvas""","{",201,201,201
++"""grey-4""","{",188,188,188
++"""Wid-alt/Anno-sec""","{",175,175,175
++"""GLOBAL title""","{",159,159,159
++"""grey-7""","{",146,146,146
++"""grey-8""","{",134,134,134
++"""GLOBAL help""","{",120,120,120
++"""Wid-bg/Anno-pri""","{",105,105,105
++"""grey-11""","{",90,90,90
++"""grey-12""","{",70,70,70
++"""grey-13""","{",45,45,45
++"""black-14""","{",0,0,0
++"""Monitor: NORMAL""","{",0,256,0
++"""green-16""","{",0,225,0
++"""Monitor: alt""","{",0,193,0
++"""green-18""","{",0,161,0
++"""green-19""","{",0,129,0
++"""Monitor: MAJOR""","{",256,0,0
++"""red-21""","{",225,0,0
++"""Mon: MAJOR/unack""","{",193,0,0
++"""red-23""","{",161,0,0
++"""red-24""","{",129,0,0
++"""Controller""","{",0,0,256
++"""blue-26""","{",0,0,225
++"""blue-27""","{",0,0,193
++"""blue-28""","{",0,0,161
++"""blue-29""","{",0,0,129
++"""Controller/alt""","{",0,256,256
++"""cyan-31""","{",0,225,225
++"""cyan-32""","{",0,193,193
++"""cyan-33""","{",0,161,161
++"""cyan-34""","{",0,129,129
++"""Monitor: MINOR""","{",256,256,0
++"""yellow-36""","{",225,225,0
++"""Mon: MINOR/unack""","{",193,193,0
++"""yellow-38""","{",161,161,0
++"""yellow-39""","{",129,129,0
++"""Shell/reldsp-alt""","{",256,177,96
++"""orange-41""","{",225,155,84
++"""orange-42""","{",193,133,72
++"""brown-43""","{",161,110,60
++"""Related display""","{",129,88,48
++"""Exit/Quit/Kill""","{",256,0,256
++"""purple-46""","{",193,0,193
++"""purple-47""","{",129,0,129
++"""48""","{",0,0,0
++"""49""","{",0,0,0
++"""LINAC canvas""","{",206,220,205
++"""LINAC title""","{",185,198,184
++"""LINAC help""","{",166,178,165
++"""VAC title""","{",225,248,177
++"""VAC help""","{",202,223,159
++"""FE canvas""","{",245,219,169
++"""FE title""","{",184,165,126
++"""FE help""","{",122,109,84
++"""COOL title""","{",181,249,215
++"""COOL help""","{",162,224,193
++"""RING canvas""","{",194,218,217
++"""RING title""","{",174,196,195
++"""RING help""","{",156,176,175
++"""CRYO title""","{",176,218,249
++"""CRYO help""","{",158,196,224
++"""TARGET canvas""","{",205,202,221
++"""TARGET title""","{",184,181,198
++"""TARGET help""","{",165,162,178
++"""RF title""","{",222,196,251
++"""RF help""","{",199,176,225
++"""CF canvas""","{",221,202,221
++"""CF title""","{",198,181,198
++"""CF help""","{",178,162,178
++"""UNSS title""","{",251,235,236
++"""UNSS help""","{",225,176,212
++"""UNMS canvas""","{",256,151,169
++"""UNMS title""","{",193,113,126
++"""UNMS help""","{",129,75,84
++"""78""","{",0,0,0
++"""79""","{",0,0,0
++"""invisible""","{",0,0,0
+diff --git a/stdApp/op/opi/color.def b/stdApp/op/opi/color.def
+new file mode 100644
+index 0000000..fea165a
+--- /dev/null
++++ b/stdApp/op/opi/color.def
+@@ -0,0 +1,96 @@
++Disconn/Invalid = 255, 255, 255
++Wid-bg/Anno-pri = 105, 105, 105
++Wid-alt/Anno-sec = 174, 174, 174
++Monitor: MAJOR = 255, 0, 0
++Mon: MAJOR/unack = 192, 0, 0
++Monitor: MINOR = 255, 255, 0
++Mon: MINOR/unack = 192, 192, 0
++Monitor: NORMAL = 0, 255, 0
++Monitor: alt = 0, 192, 0
++Controller = 0, 0, 255
++Controller/alt = 0, 255, 255
++Related display = 128, 88, 48
++Shell/reldsp-alt = 255, 176, 96
++Exit/Quit/Kill = 255, 0, 255
++GLOBAL canvas = 200, 200, 200
++GLOBAL title = 158, 158, 158
++GLOBAL help = 120, 120, 120
++FE canvas = 244, 218, 168
++FE title = 183, 164, 126
++FE help = 122, 109, 84
++LINAC canvas = 206, 220, 205
++LINAC title = 185, 198, 184
++LINAC help = 166, 178, 165
++RING canvas = 194, 218, 217
++RING title = 174, 196, 195
++RING help = 156, 176, 175
++TARGET canvas = 205, 202, 221
++TARGET title = 184, 181, 198
++TARGET help = 165, 162, 178
++CF canvas = 221, 202, 221
++CF title = 198, 181, 198
++CF help = 178, 162, 178
++UNMS canvas = 255, 150, 168
++UNMS title = 192, 113, 126
++UNMS help = 128, 75, 84
++VAC title = 225, 248, 177
++VAC help = 202, 223, 159
++COOL title = 181, 249, 215
++COOL help = 162, 224, 193
++CRYO title = 176, 218, 249
++CRYO help = 158, 196, 224
++RF title = 222, 196, 251
++RF help = 199, 175, 225
++UNSS title = 251, 235, 236
++UNSS help = 225, 176, 212
++grey-1 = 236, 236, 236
++grey-2 = 218, 218, 218
++grey-4 = 187, 187, 187
++grey-7 = 145, 145, 145
++grey-8 = 133, 133, 133
++grey-11 = 90, 90, 90
++grey-12 = 70, 70, 70
++grey-13 = 45, 45, 45
++black-14 = 0, 0, 0
++green-16 = 0, 224, 0
++green-18 = 0, 160, 0
++green-19 = 0, 128, 0
++red-21 = 224, 0, 0
++red-23 = 160, 0, 0
++red-24 = 128, 0, 0
++blue-26 = 0, 0, 224
++blue-27 = 0, 0, 192
++blue-28 = 0, 0, 160
++blue-29 = 0, 0, 128
++cyan-31 = 0, 224, 224
++cyan-32 = 0, 192, 192
++cyan-33 = 0, 160, 160
++cyan-34 = 0, 128, 128
++yellow-36 = 224, 224, 0
++yellow-38 = 160, 160, 0
++yellow-39 = 128, 128, 0
++orange-41 = 224, 154, 84
++orange-42 = 192, 132, 72
++brown-43 = 160, 110, 60
++purple-46 = 192, 0, 192
++purple-47 = 128, 0, 128
++48 = 0, 0, 0
++49 = 0, 0, 0
++78 = 0, 0, 0
++79 = 0, 0, 0
++Disconn/Invalid = 255, 255, 255
++Disconn/Invalid = 255, 255, 255
++Monitor: MINOR = 255, 255, 0
++Monitor: MAJOR = 255, 0, 0
++invisible = 0, 0, 0
++Gray_1 = 236, 236, 236
++Gray_2 = 218, 218, 218
++Gray_4 = 187, 187, 187
++Gray_7 = 145, 145, 145
++Gray_8 = 133, 133, 133
++Gray_11 = 90, 90, 90
++Gray_12 = 70, 70, 70
++Gray_13 = 45, 45, 45
++MEDM_COLOR_60 = 115,255,107
++ioc_read_fg = 10,0,184
++ioc_write_bg = 115,223,255
+diff --git a/stdApp/op/opi/colors.txt b/stdApp/op/opi/colors.txt
+new file mode 100644
+index 0000000..a9e7da2
+--- /dev/null
++++ b/stdApp/op/opi/colors.txt
+@@ -0,0 +1,81 @@
++static 0   "Disconn/Invalid"  { 65535 65535 65535 }    #0 white
++static 1   "grey-1"           { 60652 60652 60652 }    #
++static 2   "grey-2"           { 56026 56026 56026 }    #
++static 3   "GLOBAL canvas"    { 51400 51400 51400 }    #
++static 4   "grey-4"           { 48059 48059 48059 }    #
++static 5   "Wid-alt/Anno-sec" { 44718 44718 44718 }    #5
++static 6   "GLOBAL title"     { 40606 40606 40606 }    #
++static 7   "grey-7"           { 37265 37265 37265 }    #
++static 8   "grey-8"           { 34181 34181 34181 }    #
++static 9   "GLOBAL help"      { 30840 30840 30840 }    #
++static 10  "Wid-bg/Anno-pri"  { 26985 26985 26985 }    #10
++static 11  "grey-11"          { 23130 23130 23130 }    #
++static 12  "grey-12"          { 17990 17990 17990 }    #
++static 13  "grey-13"          { 11565 11565 11565 }    #
++static 14  "black-14"         {     0     0     0 }    #
++static 15  "Monitor: NORMAL"  {     0 65535     0 }    #15 green
++static 16  "green-16"         {     0 57568     0 }    #
++static 17  "Monitor: alt"     {     0 49344     0 }    #
++static 18  "green-18"         {     0 41120     0 }    #
++static 19  "green-19"         {     0 32896     0 }    #
++static 20  "Monitor: MAJOR"   { 65535     0     0 }    #20 red
++static 21  "red-21"           { 57568     0     0 }    #
++static 22  "Mon: MAJOR/unack" { 49344     0     0 }    #
++static 23  "red-23"           { 41120     0     0 }    #
++static 24  "red-24"           { 32896     0     0 }    #
++static 25  "Controller"       {     0     0 65535 }    #25 blue
++static 26  "blue-26"          {     0     0 57568 }    #
++static 27  "blue-27"          {     0     0 49344 }    #
++static 28  "blue-28"          {     0     0 41120 }    #
++static 29  "blue-29"          {     0     0 32896 }    #
++static 30  "Controller/alt"   {     0 65535 65535 }    #30 cyan
++static 31  "cyan-31"          {     0 57568 57568 }    #
++static 32  "cyan-32"          {     0 49344 49344 }    #
++static 33  "cyan-33"          {     0 41120 41120 }    #
++static 34  "cyan-34"          {     0 32896 32896 }    #
++static 35  "Monitor: MINOR"   { 65535 65535     0 }    #35 yellow
++static 36  "yellow-36"        { 57568 57568     0 }    #
++static 37  "Mon: MINOR/unack" { 49344 49344     0 }    #
++static 38  "yellow-38"        { 41120 41120     0 }    #
++static 39  "yellow-39"        { 32896 32896     0 }    #
++static 40  "Shell/reldsp-alt" { 65535 45232 24672 }    #40 orange
++static 41  "orange-41"        { 57568 39578 21588 }    #
++static 42  "orange-42"        { 49344 33924 18504 }    #
++static 43  "brown-43"         { 41120 28270 15420 }    #
++static 44  "Related display"  { 32896 22616 12336 }    # brown
++static 45  "Exit/Quit/Kill"   { 65535     0 65535 }    #45 purple
++static 46  "purple-46"        { 49344     0 49344 }    #
++static 47  "purple-47"        { 32896     0 32896 }    #
++static 48  "48"               {     0     0     0 }    #
++static 49  "49"               {     0     0     0 }    #
++static 50  "LINAC canvas"     { 52736 56320 52480 }    #50
++static 51  "LINAC title"      { 47360 50688 47104 }    #
++static 52  "LINAC help"       { 42496 45568 42240 }    #
++static 53  "VAC title"        { 57600 63488 45312 }    #
++static 54  "VAC help"         { 51712 57088 40704 }    #
++static 55  "FE canvas"        { 62708 56026 43176 }    #55
++static 56  "FE title"         { 47031 42148 32382 }    #
++static 57  "FE help"          { 31354 28013 21588 }    #
++static 58  "COOL title"       { 46336 63744 55040 }    #
++static 59  "COOL help"        { 41472 57344 49408 }    #
++static 60  "RING canvas"      { 49664 55808 55552 }    #60
++static 61  "RING title"       { 44544 50176 49920 }    #
++static 62  "RING help"        { 39936 45056 44800 }    #
++static 63  "CRYO title"       { 45056 55808 63744 }    #
++static 64  "CRYO help"        { 40448 50176 57344 }    #
++static 65  "TARGET canvas"    { 52480 51712 56576 }    #65
++static 66  "TARGET title"     { 47104 46336 50688 }    #
++static 67  "TARGET help"      { 42240 41472 45568 }    #
++static 68  "RF title"         { 56832 50176 64256 }    #
++static 69  "RF help"          { 50944 45045 57600 }    #
++static 70  "CF canvas"        { 56576 51712 56576 }    #70
++static 71  "CF title"         { 50688 46336 50688 }    #
++static 72  "CF help"          { 45568 41472 45568 }    #
++static 73  "UNSS title"       { 64256 60176 60416 }    #
++static 74  "UNSS help"        { 57600 45056 54272 }    #
++static 75  "UNMS canvas"      { 65535 38550 43176 }    #75
++static 76  "UNMS title"       { 49344 29041 32382 }    #
++static 77  "UNMS help"        { 32896 19275 21588 65535 0 0 }    #
++static 78  "78"               {     0     0     0 }    #
++static 79  "79"               {     0     0     0 65000 65000 65000 }    #
++static 80  "invisible"        {     0     0     0 } 

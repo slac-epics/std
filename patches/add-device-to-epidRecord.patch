@@ -1,0 +1,13 @@
+diff --git a/stdApp/src/epidRecord.dbd b/stdApp/src/epidRecord.dbd
+index 50a7503..b16a3d8 100644
+--- a/stdApp/src/epidRecord.dbd
++++ b/stdApp/src/epidRecord.dbd
+@@ -269,3 +269,8 @@ recordtype(epid) {
+ 		interest(3)
+ 	}
+ }
++
++device(epid,CONSTANT,devEpidSoft,"Soft Channel")
++device(epid,CONSTANT,devEpidSoftCB,"Async Soft Channel")
++device(epid,INST_IO,devEpidFast,"Fast Epid")
++

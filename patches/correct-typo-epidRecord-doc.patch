@@ -1,0 +1,13 @@
+diff --git a/documentation/epidRecord.html b/documentation/epidRecord.html
+index 4b9dea2..1fbc648 100644
+--- a/documentation/epidRecord.html
++++ b/documentation/epidRecord.html
+@@ -487,7 +487,7 @@ calculate these as follows:</p>
+     <ul>
+         <li>I is not allowed to increase if the computed output, M(n), is at
+             the high limit, DRVH.</li>
+-        <li>I is now allowed to decrease if the computed output, M(n), is at
++        <li>I is not allowed to decrease if the computed output, M(n), is at
+             the low limit, DRVL.</li>
+         <li>I is not allowed to be less than DRVL or greater than
+             DRVH.</li>

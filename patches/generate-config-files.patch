@@ -1,0 +1,192 @@
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..c8c2c52
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1,17 @@
++*~
++O.*
++*.log
++*.swp
++bin/
++cfg/
++db/
++dbd/
++display/
++html/
++include/
++lib/
++templates/
++cdCommands
++envPaths
++RELEASE_SITE
++tags
+diff --git a/configure/CONFIG_SITE b/configure/CONFIG_SITE
+new file mode 100644
+index 0000000..a5b0c75
+--- /dev/null
++++ b/configure/CONFIG_SITE
+@@ -0,0 +1,31 @@
++# CONFIG_SITE
++
++# Make any application-specific changes to the EPICS build
++# configuration variables in this file.
++#
++# Host/target specific settings can be specified in files named
++#  CONFIG_SITE.$(EPICS_HOST_ARCH).Common
++#  CONFIG_SITE.Common.$(T_A)
++#  CONFIG_SITE.$(EPICS_HOST_ARCH).$(T_A)
++
++# Set this when you only want to compile this application
++# for a subset of the cross-compiled target architectures
++# that Base is built for.
++#CROSS_COMPILER_TARGET_ARCHS += RTEMS-uC5282
++#CROSS_COMPILER_TARGET_ARCHS += RTEMS-pc586
++#CROSS_COMPILER_TARGET_ARCHS += RTEMS-beatnik
++#CROSS_COMPILER_TARGET_ARCHS += linux-x86
++#CROSS_COMPILER_TARGET_ARCHS += linux-x86_64
++#BUILD_FOR_HOST_ARCH =
++
++# Set this when your IOC and the host use different paths
++# to access the application. This will be needed to boot
++# from a Microsoft FTP server or with some NFS mounts.
++# You must rebuild in the iocBoot directory for this to
++# take effect.
++#IOCS_APPL_TOP = <path to application top as seen by IOC>
++
++# If you don't want to install into $(TOP) then
++# define INSTALL_LOCATION here
++#INSTALL_LOCATION=<fullpathname>
++
+diff --git a/configure/RELEASE b/configure/RELEASE
+index 5c653d3..f32a656 100644
+--- a/configure/RELEASE
++++ b/configure/RELEASE
+@@ -1,22 +1,17 @@
+-#RELEASE Location of external products
++# RELEASE
++# Defines location of external products
+ # Run "gnumake clean uninstall install" in the application
+ # top directory each time this file is changed.
++-include $(TOP)/configure/RELEASE.local
+ 
+-TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
++# Check for valid macro definitions for module release directories
++# You can add tests here to make sure RELEASE.local defined valid
++# macros for all the module dependencies
++#ifeq ($(wildcard $(EPICS_BASE)/include),)
++#$(error Invalid EPICS_BASE: $(EPICS_BASE))
++#endif
++#ifeq ($(wildcard $(ASYN)/include),)
++#$(error Invalid ASYN: $(ASYN))
++#endif
++#...
+ 
+-SUPPORT=/home/oxygen/MOONEY/epics/synAppsSVN/support
+--include $(TOP)/../configure/SUPPORT.$(EPICS_HOST_ARCH)
+-
+-#If using the sequencer, point SNCSEQ at its top directory:
+-SNCSEQ=$(SUPPORT)/seq-2-1-2
+-
+-# For serial support
+-ASYN=$(SUPPORT)/asyn-4-17
+-
+-# EPICS_BASE usually appears last so other apps can override stuff:
+-EPICS_BASE=/home/oxygen/MOONEY/epics/base-3.14.12.1
+--include $(TOP)/../configure/EPICS_BASE.$(EPICS_HOST_ARCH)
+-
+-#Capfast users may need the following definitions
+-#CAPFAST_TEMPLATES=
+-#SCH2EDIF_PATH=
+diff --git a/configure/RELEASE.local b/configure/RELEASE.local
+new file mode 100644
+index 0000000..cf99108
+--- /dev/null
++++ b/configure/RELEASE.local
+@@ -0,0 +1,39 @@
++# RELEASE.local
++#
++# Read definitions of:
++#	EPICS_SITE_TOP
++#	BASE_MODULE_VERSION
++#	EPICS_MODULES 
++# from one of the following options
++-include $(TOP)/../../RELEASE_SITE
++-include $(TOP)/RELEASE_SITE
++
++# Check that EPICS_MODULES was defined in a RELEASE_SITE file
++-include $(TOP)/../../RELEASE_SITE.check
++
++# ==========================================================
++# Define the version strings for all needed modules
++# Use naming pattern:
++#   FOO_MODULE_VERSION = R1.2
++# so scripts can extract version strings
++# Don't set your version to anything such as "test" that
++# could match a directory name.
++# ==========================================================
++SEQ_MODULE_VERSION=R2.2.4-1.0
++ASYN_MODULE_VERSION=R4.30-1.1.1
++
++# ==========================================================
++# Define module paths using pattern
++# FOO = $(EPICS_MODULES)/foo/$(FOO_MODULE_VERSION)
++#  or
++# FOO = /Full/Path/To/Development/Version 
++# ==========================================================
++SNCSEQ=$(EPICS_MODULES)/seq/$(SEQ_MODULE_VERSION)
++ASYN=$(EPICS_MODULES)/asyn/$(ASYN_MODULE_VERSION)
++
++# Set EPICS_BASE last so it appears last in the DB, DBD, INCLUDE, and LIB search paths
++EPICS_BASE              = $(EPICS_SITE_TOP)/base/$(BASE_MODULE_VERSION)
++
++# Check for undefined EPICS_BASE
++-include $(TOP)/../../EPICS_BASE.check
++
+diff --git a/configure/RELEASE.win32-x86 b/configure/RELEASE.win32-x86
+new file mode 100644
+index 0000000..b3a1bb7
+--- /dev/null
++++ b/configure/RELEASE.win32-x86
+@@ -0,0 +1,17 @@
++#RELEASE Location of external products
++# Run "gnumake clean uninstall install" in the application
++# top directory each time this file is changed.
++
++TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
++
++#If using the sequencer, point SNCSEQ at its top directory:
++#SNCSEQ=/corvette/home/epics/synApps5-1/seq/2-0-8
++
++ASYN=J:/epics/devel/asyn/4-4beta
++
++# EPICS_BASE usually appears last so other apps can override stuff:
++EPICS_BASE=H:/epics/base-3.14.9beta
++
++#Capfast users may need the following definitions
++#CAPFAST_TEMPLATES=
++#SCH2EDIF_PATH=
+diff --git a/configure/RULES.archive b/configure/RULES.archive
+new file mode 100644
+index 0000000..a8efb44
+--- /dev/null
++++ b/configure/RULES.archive
+@@ -0,0 +1,2 @@
++# RULES.archive
++include $(EPICS_BASE)/configure/RULES.archive
+diff --git a/configure/RULES.autosave b/configure/RULES.autosave
+new file mode 100644
+index 0000000..c3b5cb0
+--- /dev/null
++++ b/configure/RULES.autosave
+@@ -0,0 +1,2 @@
++# RULES.autosave
++include $(EPICS_BASE)/configure/RULES.autosave
+diff --git a/configure/RULES.copy b/configure/RULES.copy
+new file mode 100644
+index 0000000..6cf19e7
+--- /dev/null
++++ b/configure/RULES.copy
+@@ -0,0 +1,2 @@
++# RULES.copy
++include $(EPICS_BASE)/configure/RULES.copy
