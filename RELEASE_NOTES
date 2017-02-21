@@ -1,2 +1,12 @@
+R3.2-1.0.0:      Marcio Donadio:
+                 - merge with std R3-2 release
+                 - local configuration files for git workflow
+                 - deleted stdApp/src/base.dbd
+                 - created patch files to:
+                     - add 3 devices to epidRecord
+                     - correct typo in epidRecord
+                     - generate configuration files
+                     - add new adl, edl and opi files
+
 R3.1-2.0.0:      Marcio Donadio:
                  Creating new release R3.1-2.0.0 to avoid confusion w/ prior lcls R3-1_1-4 release
