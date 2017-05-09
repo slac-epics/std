@@ -1,5 +1,6 @@
 #CONFIG
 include $(TOP)/configure/CONFIG_APP
+-include $(TOP)/configure/CONFIG_SITE
 # Add any changes to make definitions here
 
 # At present, base has only 68040
