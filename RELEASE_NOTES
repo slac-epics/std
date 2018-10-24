@@ -10,6 +10,11 @@
 #  Auth: dd-yyy,yyyy, Author's Name      (USERNAME)           
 #  Rev:  dd-mmm-yyyy, Reviewer's Name    (USERNAME)
 #==============================================================
+R3.2-0.1.1:      Marcio Donadio:
+                 - Bumped:
+                   - seq R2.2.4-1.1
+                   - asyn R4.31-0.1.0 
+
 R3.2-0.1.0:      Marcio Donadio:
                  - merge with std R3-2 release
                  - local configuration files for git workflow
