@@ -20,7 +20,7 @@
 # could match a directory name.
 # ==========================================================
 SEQ_MODULE_VERSION=R2.2.4-1.0
-ASYN_MODULE_VERSION=R4.31-1.0.0
+ASYN_MODULE_VERSION=R4.32-1.0.0
 
 # ==========================================================
 # Define module paths using pattern
