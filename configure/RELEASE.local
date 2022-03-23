@@ -19,8 +19,8 @@
 # Don't set your version to anything such as "test" that
 # could match a directory name.
 # ==========================================================
-SEQ_MODULE_VERSION=R2.2.4-1.0
-ASYN_MODULE_VERSION=R4.31-0.1.0
+SEQ_MODULE_VERSION=R2.2.4-1.2
+ASYN_MODULE_VERSION=R4.39-1.0.1
 
 # ==========================================================
 # Define module paths using pattern
